@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== Start Header Section ========== -->
+    
+    <header class="p-tb-20 box-shadow col-white">
+        <div class="container">
+            <div class="navbar d-flex align-justify">
+                <div class="my-img">
+                    <img src="shruti_logo.png" alt="" id="myImg">
+                </div>
+                <ul class="menu-bar d-flex">
+                    <li class="nav-item text-20 f-bold col-black">Text Converter</li>
+                    <li class="nav-item toggleDiv">
+                        <div class="toggleButton div-sun"></div>
+                        <i class="fa-solid fa-moon text-20 col-white"></i>
+                        <i class="fa-solid fa-sun text-20 col-white"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== End Header Section ========== -->
+
+
+    <!-- ========== Start Main-part Section ========== -->
+    
+    <main>
+        <div class="container-small m-top-30">
+
+            <div class="main-box">
+                <div class="input-box">
+                    <input type="text" id="input" class="m-top-30 p-all-10 text-16 box-shadow" placeholder="Add Text ...">
+                    <textarea name="textarea" id="inputTextArea" rows="7" class="m-top-30 p-all-10 text-16 box-shadow" placeholder="Result here ..."></textarea>
+                </div>
+    
+                <div class="btn-box m-top-30 d-grid">
+                    <button class="btn text-18 upperCase box-shadow f-bold">UpperCase</button>
+                    <button class="btn text-18 lowerCase box-shadow f-bold">LowerCase</button>
+                    <button class="btn text-18 titleCase box-shadow f-bold">Title Case</button>
+                    <button class="btn text-18 wordCount box-shadow f-bold">Word Count</button>
+                    <button class="btn text-18 charCount box-shadow f-bold">Character count</button>
+                    <button class="btn text-18 meaning box-shadow f-bold">Meaning</button>
+                    <button class="btn text-18 copyText box-shadow f-bold">Copy Text</button>
+                    <button class="btn text-18 clearText box-shadow f-bold">Clear Text</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== End Main-part Section ========== -->
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

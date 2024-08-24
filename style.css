@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --col-dark: #0f0e29;
+    --col-light: #9290C3;
+    --col-white: #f4f4f4;
+    --col-black: #272121;
+    --filter: invert(0%) sepia(96%) saturate(7447%) hue-rotate(284deg) brightness(87%) contrast(97%);
+    --text-16: 1.6rem;
+    --text-18: 1.8rem;
+    --text-20: 2rem;
+    --fw-bold: 700;
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.container-small {
+    max-width: 60rem;
+    margin: 0 auto;
+    /* border: 0.1rem solid rebeccapurple; */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-justify {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+    row-gap: 2rem;
+}
+
+.p-all-10 {
+    padding: 1rem;
+}
+
+.p-tb-20 {
+    padding-block: 2rem;
+}
+
+.m-top-30 {
+    margin-top: 3rem;
+}
+
+.text-16 {
+    font-size: var(--text-16);
+}
+
+.text-18 {
+    font-size: var(--text-18);
+}
+
+.text-20 {
+    font-size: var(--text-20);
+}
+
+.col-white {
+    color: var(--col-white);
+}
+
+.col-black{
+    color: var(--col-black);
+}
+
+.f-bold {
+    font-weight: bold;
+}
+
+.box-shadow {
+    box-shadow: 0 0 0.6rem var(--col-dark);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--col-dark);
+    padding: 1.7rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: var(--col-light);
+
+    &:hover {
+        color: var(--col-white);
+    }
+}
+
+header {
+    max-width: 100%;
+
+    & .my-img {
+        width: 10rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            filter: var(--filter);
+        }
+    }
+
+    & .menu-bar {
+        gap: 3rem;
+
+        & input[type="checkbox"] {
+            display: none;
+        }
+
+        & .toggleDiv {
+            position: relative;
+            display: inline-block;
+            width: 6rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: var(--col-dark);
+            transition: 0.3s all linear;
+            z-index: 1;
+            cursor: pointer;
+
+            & .toggleButton{
+                content: "";
+                width: 2.2rem;
+                aspect-ratio: 1;
+                position: absolute;
+                top: 0.35rem;
+                left: 0.4rem;
+                border-radius: 0.5rem;
+                background-color: var(--col-light);
+                z-index: 3;
+                transition: 0.3s all linear;
+            }
+
+            .fa-sun {
+                position: absolute;
+                left: 0.5rem;
+                top: 0.6rem;
+                z-index: 5;
+                display: none;
+                transition: display 0.3s ease-in-out;
+            }
+
+            .fa-moon {
+                position: absolute;
+                right: 0.6rem;
+                top: 0.5rem;
+                z-index: 5;
+                transition: display 0.3s ease-in-out;
+                /* display: none; */
+            }
+
+        }
+    }
+}
+
+main {
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        border-radius: 0.5rem;
+        outline: none;
+        border: 0.2rem solid var(--col-light);
+    }
+}
+
+
+
+
+/* todo media query =====================================*/
+@media screen and (max-width:1430px) {
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem 3rem;
+    }
+    header{
+        & .my-img{
+            width: 8rem;
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    html{
+        font-size: 50%;
+    }
+    main{
+        & .main-box{
+            padding: 2rem 4rem;
+        }
+    }
+    .d-grid{
+        column-gap: 9rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    html{
+        font-size: 48%;
+    }
+    .d-grid{
+        column-gap: 4rem;
+    }
+    .menu-bar{
+        gap: 2rem !important;
+
+        & li:first-child{
+            font-size: var(--text-18);
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    html{
+        font-size: 45%;
+    }
+    .d-grid{
+        column-gap: 3rem;
+    }
+}
